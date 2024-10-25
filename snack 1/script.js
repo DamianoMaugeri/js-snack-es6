@@ -39,13 +39,15 @@ const arraybici = [
 
     {
         nome: 'Bianchi Specialissima RC/Shimano Dura-Ace',
-        peso: 6.6,
+        peso: 6.36,
     }
 ]
 
 
 
-let oggettoBiciLeggera = arraybici[0]
+let oggettoBiciLeggera = arraybici[0];
+
+let arrayRisultati = [];
 
 
 
@@ -55,12 +57,21 @@ for (let i = 0; i < arraybici.length; i++) {
     if (arraybici[i].peso < oggettoBiciLeggera.peso) {
 
         oggettoBiciLeggera = arraybici[i];
+    }
 
+}
+for (let i = 0; i < arraybici.length; i++) {
+
+
+    if (arraybici[i].peso === oggettoBiciLeggera.peso) {
+
+        arrayRisultati.push(arraybici[i]);
     }
 
 }
 
 console.log(oggettoBiciLeggera)
+console.log(arrayRisultati)
 
 
 
