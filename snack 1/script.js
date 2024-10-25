@@ -45,24 +45,27 @@ const bici8 = {
 arraybici.push(bici1,bici2,bici3,bici4,bici5,bici6,bici7,bici8)
 console.log(arraybici)
 
-let bicileggera =''
+let oggettoBiciLeggera = arraybici[0]
 
-let pesobicileggera = 100
+
 
 for (let i=0; i < arraybici.length; i++){
+    
 
-    if (arraybici[i].peso <pesobicileggera){
+    if (arraybici[i].peso < oggettoBiciLeggera.peso){
 
-        bicileggera = arraybici[i].nome;
-        pesobicileggera = arraybici[i].peso;
+        oggettoBiciLeggera = arraybici[i];
+
     }
     
 }
 
-console.log(bicileggera,pesobicileggera);
+console.log(oggettoBiciLeggera)
+
+
 
 const nomeElement = document.getElementById('nome-bici');
 const pesoElement = document.getElementById('peso-bici');
 
-nomeElement.innerHTML = `${bicileggera}`
-pesoElement.innerHTML = `con il peso di: ${pesobicileggera}kg`
+nomeElement.innerHTML = `${oggettoBiciLeggera.nome}`
+pesoElement.innerHTML = `con il peso di: ${oggettoBiciLeggera.peso}kg`
