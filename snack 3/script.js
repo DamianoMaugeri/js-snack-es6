@@ -54,7 +54,7 @@ function arrayPiuPiccolo(array, a, b) {
     }
 
 
-
+    // se a è minore di 0 
     if (a < 0) {
         a = 0
     }
@@ -64,7 +64,7 @@ function arrayPiuPiccolo(array, a, b) {
         b = array.length
     }
 
-
+    // stessa funzionalià di quelle sopra ma usando math 
     a = Math.max(a, 0);
     b = Math.min(b, array.length);
 
@@ -73,7 +73,8 @@ function arrayPiuPiccolo(array, a, b) {
 
     let newArray = []
 
-    /*
+    /*   sostituisco il ciclo for che cicla tutto l' array con all'interno una condizione in cui fa quello che mi interessa 
+        con un ciclo for che cicla solo quando deve fare ciò che mi interessa .
 
     for (let i=0; i<array.length; i++){
 
