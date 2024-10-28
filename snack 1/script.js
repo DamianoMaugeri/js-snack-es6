@@ -41,7 +41,7 @@ const arraybici = [
         nome: 'Bianchi Specialissima RC/Shimano Dura-Ace',
         peso: 6.36,
     }
-]
+];
 
 
 
@@ -49,7 +49,7 @@ let oggettoBiciLeggera = arraybici[0];
 
 let arrayRisultati = [];
 
-
+//possiamo farlo partire da 1
 
 for (let i = 0; i < arraybici.length; i++) {
 
@@ -69,6 +69,16 @@ for (let i = 0; i < arraybici.length; i++) {
     }
 
 }
+
+
+// per ordinare l' array 
+
+const arrayBiciOrdinato = arraybici.sort((a, b) => a.peso - b.peso);
+
+console.log(arrayBiciOrdinato);
+console.log(arrayBiciOrdinato[0]);
+
+
 
 console.log(oggettoBiciLeggera)
 console.log(arrayRisultati)

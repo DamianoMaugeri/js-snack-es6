@@ -26,19 +26,73 @@ const nuovo = arrayPiuPiccolo(memberEmail, 2, 7)
 
 console.log(nuovo)
 
+/**
+ * 
+ * @param {Array} array 
+ * @param {Number} a 
+ * @param {Number} b 
+ * @returns {Array | undefined}
+ */
+function arrayPiuPiccolo(array, a, b) {
 
-function arrayPiuPiccolo(array, a ,b) {
+
+    // aggiungere controlli 
+    // se il nostro array da ciclare non è un array 
+    if (!Array.isArray(array)) {
+        console.error('element che in questo caso abbiamo chiamato array deve essere un array');
+        return
+    }
+
+    if (isNaN(a)) {
+        console.error('a non è un numero')
+        return
+    }
+
+    if (isNaN(b)) {
+        console.error('b non è un numero')
+        return
+    }
+
+
+
+    if (a < 0) {
+        a = 0
+    }
+    // stesso caso con b ma al contrario
+
+    if (b > array.length) {
+        b = array.length
+    }
+
+
+    a = Math.max(a, 0);
+    b = Math.min(b, array.length);
+
+
+
 
     let newArray = []
 
+    /*
+
     for (let i=0; i<array.length; i++){
 
-        if(i > a && i < b ){
+        if(i >= a && i < b ){
             newArray.push(array[i])
         }
 
     }
+    return newArray 
+
+    */
+
+    for (let i = a; i < b; i++) {
+
+        newArray.push(array[i])
+
+    }
     return newArray
+
 
 }
 
